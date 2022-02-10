@@ -1,0 +1,6 @@
+---
+- name: configure the dock
+  hosts: localhost
+  tasks:
+    - name: remove everything from the dock
+      shell: dockutil --remove all

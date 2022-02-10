@@ -1,0 +1,17 @@
+---
+- name: download and intall apps
+  hosts: localhost
+  vars:
+    apps:
+      - 1password
+      - amazon-workspaces
+      - evernote
+      - firefox
+      - google-chrome
+      - slack
+      - zoom
+  tasks:
+    - name: loop through app installs
+      homebrew_cask:
+        name: "{{ item }}"
+      loop: "{{ apps }}"

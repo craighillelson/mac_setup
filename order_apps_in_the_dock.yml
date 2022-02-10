@@ -1,0 +1,26 @@
+---
+- name: Fix order
+  hosts: localhost
+  vars:
+    dockitems_to_persist:
+      - name: Atom
+        pos: 1
+      - name: iTerm
+        pos: 2
+      - name: Firefox
+        pos: 3
+      - name: Safari
+        pos: 4
+      - name: Google Chrome
+        pos: 5
+      - name: WorkSpaces
+        pos: 6
+      - name: Music
+        pos: 7
+      - name: Podcasts
+        pos: 8
+  tasks:
+    - name: order items
+      command:
+        dockutil --move '{{ item.name }}' --position {{ item.pos }}
+      loop: "{{ dockitems_to_persist }}"
