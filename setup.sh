@@ -23,6 +23,3 @@ ansible-playbook populate_dock.yml
 ansible-playbook order_apps_in_the_dock.yml
 
 echo "\n"restart your computer to lock in settings and then you\'re all set"\n"
-
-# reboot
-# sudo reboot
