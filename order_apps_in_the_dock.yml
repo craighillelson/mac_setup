@@ -5,20 +5,22 @@
     dockitems_to_persist:
       - name: Atom
         pos: 1
-      - name: iTerm
+      - name: IntelliJ IDEA CE
         pos: 2
-      - name: Firefox
+      - name: iTerm
         pos: 3
-      - name: Safari
+      - name: Firefox
         pos: 4
-      - name: Google Chrome
+      - name: Safari
         pos: 5
-      - name: WorkSpaces
+      - name: Google Chrome
         pos: 6
-      - name: Music
+      - name: WorkSpaces
         pos: 7
-      - name: Podcasts
+      - name: Music
         pos: 8
+      - name: Podcasts
+        pos: 9
   tasks:
     - name: order items
       command:
