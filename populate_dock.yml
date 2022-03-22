@@ -1,5 +1,5 @@
 ---
-- name: Fix order
+- name: populate dock
   hosts: localhost
   vars:
     apps:
