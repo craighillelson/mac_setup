@@ -7,28 +7,44 @@
         pos: 1
       - name: IntelliJ IDEA CE
         pos: 2
-      - name: PyCharm CE
-        pos: 3
       - name: iTerm
-        pos: 4
+<<<<<<< Updated upstream
+        pos: 3
       - name: Firefox
-        pos: 5
+        pos: 4
       - name: Safari
-        pos: 6
+        pos: 5
       - name: Google Chrome
-        pos: 7
+        pos: 6
       - name: WorkSpaces
-        pos: 8
-      - name: Pluralsight
-        pos: 9
-      - name: Logic Pro X
-        pos: 10
+        pos: 7
       - name: Music
-        pos: 11
+        pos: 8
       - name: Podcasts
+        pos: 9
+=======
+        pos: 4
+      - name: Github Desktop
+        pos: 5
+      - name: Firefox
+        pos: 6
+      - name: Safari
+        pos: 7
+      - name: Google Chrome
+        pos: 8
+      - name: WorkSpaces
+        pos: 9
+      - name: Pluralsight
+        pos: 10
+      - name: Logic Pro X
+        pos: 11
+      - name: Music
         pos: 12
+      - name: Podcasts
+        pos: 13
+>>>>>>> Stashed changes
   tasks:
-    - name: order apps in the doc
+    - name: order items
       command:
         dockutil --move '{{ item.name }}' --position {{ item.pos }}
       loop: "{{ dockitems_to_persist }}"
