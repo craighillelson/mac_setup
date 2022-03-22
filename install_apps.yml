@@ -7,8 +7,10 @@
       - amazon-workspaces
       - evernote
       - firefox
+      - intellij-idea-ce
       - github
       - google-chrome
+      - pycharm-ce
       - slack
       - zoom
   tasks:

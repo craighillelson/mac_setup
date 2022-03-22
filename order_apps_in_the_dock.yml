@@ -1,5 +1,5 @@
 ---
-- name: Fix order
+- name: order the apps in the dock
   hosts: localhost
   vars:
     dockitems_to_persist:
@@ -7,22 +7,9 @@
         pos: 1
       - name: IntelliJ IDEA CE
         pos: 2
-      - name: iTerm
-<<<<<<< Updated upstream
+      - name: PyCharm CE
         pos: 3
-      - name: Firefox
-        pos: 4
-      - name: Safari
-        pos: 5
-      - name: Google Chrome
-        pos: 6
-      - name: WorkSpaces
-        pos: 7
-      - name: Music
-        pos: 8
-      - name: Podcasts
-        pos: 9
-=======
+      - name: iTerm
         pos: 4
       - name: Github Desktop
         pos: 5
@@ -42,7 +29,6 @@
         pos: 12
       - name: Podcasts
         pos: 13
->>>>>>> Stashed changes
   tasks:
     - name: order items
       command:
