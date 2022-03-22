@@ -1,5 +1,5 @@
 ---
-- name: Fix order
+- name: order items in the dock
   hosts: localhost
   vars:
     apps:
@@ -8,12 +8,15 @@
       - '/Applications/Google Chrome.app'
       - '/Applications/IntelliJ IDEA CE.app'
       - '/Applications/iTerm.app'
+      - '/Applications/Logic Pro X.app'
       - '/System/Applications/Music.app'
       - '/System/Applications/Podcasts.app'
+      - '/Applications/Pluralsight.app'
+      - '/Applications/PyCharm CE.app'
       - '/Applications/Safari.app'
       - '/Applications/WorkSpaces.app'
   tasks:
-    - name: order items
+    - name: add apps to the dock
       command:
         dockutil --add '{{ item }}'
       loop: "{{ apps }}"
