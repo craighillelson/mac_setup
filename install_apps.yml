@@ -5,10 +5,10 @@
     apps:
       - 1password
       - amazon-workspaces
+      - evernote
       - firefox
+      - github
       - google-chrome
-      - intellij-idea-ce
-      - pycharm-ce
       - slack
       - zoom
   tasks:
