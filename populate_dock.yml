@@ -1,20 +1,27 @@
 ---
-- name: populate dock
+- name: populate the dock with apps you use most often
   hosts: localhost
   vars:
     apps:
+      - '/Applications/1Password.app'
       - '/Applications/Atom.app'
       - '/Applications/Firefox.app'
       - '/Applications/Github Desktop.app'
       - '/Applications/Google Chrome.app'
       - '/Applications/IntelliJ IDEA CE.app'
       - '/Applications/iTerm.app'
+      - '/Applications/Logic Pro X.app'
       - '/System/Applications/Music.app'
+      - '/Applications/Pluralsight.app'
       - '/System/Applications/Podcasts.app'
+      - '/Applications/Postman.app'
+      - '/Applications/PyCharm CE.app'
       - '/Applications/Safari.app'
+      - '/Applications/Slack.app'
       - '/Applications/WorkSpaces.app'
+      - '/Applications/zoom.us.app'
   tasks:
-    - name: order items
+    - name: adding 1Password, Atom, Firefox, etc. to the dock
       command:
         dockutil --add '{{ item }}'
       loop: "{{ apps }}"

@@ -1,20 +1,20 @@
 ---
-- name: download and intall apps
+- name: downloading and installing all the apps you need
   hosts: localhost
   vars:
     apps:
       - 1password
       - amazon-workspaces
-      - evernote
       - firefox
       - intellij-idea-ce
+      - iterm2
       - github
       - google-chrome
       - pycharm-ce
       - slack
       - zoom
   tasks:
-    - name: loop through app installs
+    - name: looping through app installs
       homebrew_cask:
         name: "{{ item }}"
       loop: "{{ apps }}"
