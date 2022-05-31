@@ -1,5 +1,5 @@
 ---
-- name: configure os
+- name: configuring the os just the way you like it
   hosts: localhost
   tasks:
     - name: set desktop background
@@ -18,3 +18,5 @@
       shell: defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
     - name: turn on secondary click in system preferences
       shell: defaults write NSGlobalDomain ContextMenuGesture -int 1
+    - name: show bluetooth in the menu bar
+      shell: defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist Bluetooth -int 18

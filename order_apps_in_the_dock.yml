@@ -1,36 +1,44 @@
 ---
-- name: order the apps in the dock
+- name: arranging apps in the dock in the order you like
   hosts: localhost
   vars:
     dockitems_to_persist:
-      - name: Atom
+      - name: 1Password
         pos: 1
-      - name: IntelliJ IDEA CE
+      - name: Atom
         pos: 2
-      - name: PyCharm CE
+      - name: IntelliJ IDEA CE
         pos: 3
-      - name: iTerm
+      - name: PyCharm CE
         pos: 4
-      - name: Github Desktop
+      - name: iTerm
         pos: 5
-      - name: Firefox
+      - name: Postman
         pos: 6
-      - name: Safari
+      - name: Github Desktop
         pos: 7
-      - name: Google Chrome
+      - name: Firefox
         pos: 8
-      - name: WorkSpaces
+      - name: Safari
         pos: 9
-      - name: Pluralsight
+      - name: Google Chrome
         pos: 10
-      - name: Logic Pro X
+      - name: WorkSpaces
         pos: 11
-      - name: Music
+      - name: Pluralsight
         pos: 12
-      - name: Podcasts
+      - name: Slack
         pos: 13
+      - name: zoom.us
+        pos: 14
+      - name: Logic Pro X
+        pos: 15
+      - name: Music
+        pos: 16
+      - name: Podcasts
+        pos: 17
   tasks:
-    - name: order items
+    - name: 1Password, software development apps, browsers, communication, entertainment
       command:
         dockutil --move '{{ item.name }}' --position {{ item.pos }}
       loop: "{{ dockitems_to_persist }}"

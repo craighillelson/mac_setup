@@ -1,0 +1,10 @@
+---
+- name: configuring hostname, local hostname, and computer name
+  hosts: localhost
+  tasks:
+    - name: configure hostname
+      shell: sudo scutil --set HostName "craigersmbp"
+    - name: configure local hostname
+      shell: sudo scutil --set LocalHostName "craigersmbp"
+    - name: configure computer name
+      shell: sudo scutil --set ComputerName "craigersmbp"
