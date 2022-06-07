@@ -22,8 +22,8 @@
   hosts: localhost
   vars:
     apps:
-      - cowsay
       - bat
+      - cowsay
   tasks:
     - name: looping through apps installed via cask
       homebrew:
