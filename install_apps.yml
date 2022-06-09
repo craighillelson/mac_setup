@@ -14,6 +14,8 @@
       - slack
       - zoom
   tasks:
+    - name: update homebrew
+      shell: brew update
     - name: loop through apps installed via cask
       homebrew_cask:
         name: "{{ item }}"
@@ -22,6 +24,7 @@
   hosts: localhost
   vars:
     apps:
+      - awscli
       - bat
       - cowsay
       - tree
