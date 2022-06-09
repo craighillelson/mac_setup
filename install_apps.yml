@@ -1,5 +1,5 @@
 ---
-- name: downloading and installing all the gui apps you need via homebrew casks
+- name: download and install all the gui apps you need via homebrew casks
   hosts: localhost
   vars:
     apps:
@@ -14,18 +14,19 @@
       - slack
       - zoom
   tasks:
-    - name: looping through apps installed via cask
+    - name: loop through apps installed via cask
       homebrew_cask:
         name: "{{ item }}"
       loop: "{{ apps }}"
-- name: downloading and installing all the apps you need via homebrew
+- name: download and install all the apps you need via homebrew
   hosts: localhost
   vars:
     apps:
       - bat
       - cowsay
+      - tree
   tasks:
-    - name: looping through apps installed via cask
+    - name: loop through apps installed via cask
       homebrew:
         name: "{{ item }}"
       loop: "{{ apps }}"
