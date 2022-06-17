@@ -5,6 +5,7 @@
     apps:
       - '/Applications/1Password.app'
       - '/Applications/Atom.app'
+      - '/System/Applications/Books.app'
       - '/Applications/Firefox.app'
       - '/Applications/Github Desktop.app'
       - '/Applications/Google Chrome.app'
@@ -12,6 +13,7 @@
       - '/Applications/iTerm.app'
       - '/Applications/Logic Pro X.app'
       - '/System/Applications/Music.app'
+      - '/Applications/Parallels Desktop.app'
       - '/Applications/Pluralsight.app'
       - '/System/Applications/Podcasts.app'
       - '/Applications/Postman.app'
