@@ -1,22 +1,22 @@
 ---
-- name: configuring the os just the way you like it
-  hosts: localhost
-  tasks:
-    - name: set desktop background
-      shell: osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/System/Library/Desktop Pictures/Solid Colors/Cyan.png"'
-    - name: show hard drive on the desktop
-      shell: defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
-    - name: show removable media on the desktop
-      shell: defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
-    - name: show all file extensions
-      shell: defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-    - name: enable tap to click
-      shell: defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
-    - name: turn on tap to click in system preferences
-      shell: defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-    - name: enable secondary click
-      shell: defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
-    - name: turn on secondary click in system preferences
-      shell: defaults write NSGlobalDomain ContextMenuGesture -int 1
-    - name: show bluetooth in the menu bar
-      shell: defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist Bluetooth -int 18
+# - name: configuring the os just the way you like it
+  # hosts: localhost
+  # tasks:
+- name: set desktop background
+  shell: osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/System/Library/Desktop Pictures/Solid Colors/Cyan.png"'
+- name: show hard drive on the desktop
+  shell: defaults write com.apple.finder ShowHardDrivesOnDesktop -bool true
+- name: show removable media on the desktop
+  shell: defaults write com.apple.finder ShowRemovableMediaOnDesktop -bool true
+- name: show all file extensions
+  shell: defaults write NSGlobalDomain AppleShowAllExtensions -bool true
+- name: enable tap to click
+  shell: defaults write com.apple.AppleMultitouchTrackpad Clicking -bool true
+- name: turn on tap to click in system preferences
+  shell: defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
+- name: enable secondary click
+  shell: defaults write com.apple.AppleMultitouchTrackpad TrackpadRightClick -bool true
+- name: turn on secondary click in system preferences
+  shell: defaults write NSGlobalDomain ContextMenuGesture -int 1
+- name: show bluetooth in the menu bar
+  shell: defaults write ~/Library/Preferences/ByHost/com.apple.controlcenter.plist Bluetooth -int 18

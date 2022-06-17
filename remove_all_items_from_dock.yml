@@ -1,6 +1,18 @@
 ---
-- name: remove everything from the dock
-  hosts: localhost
-  tasks:
-    - name: use dockutil to remove all apps from the dock
-      shell: dockutil --remove all
+# - name: remove everything from the dock
+#   hosts: localhost
+#   tasks:
+- name: use dockutil to remove all apps from the dock
+  shell: dockutil --remove all
+
+# - name: update dock
+#   configure_dock: true
+#   dockitems_remove:
+#     - Launchpad
+#     - TV
+#     - Podcasts
+#     - 'App Store'
+#   dockitems_persist:
+#     - name: "Atom"
+#       path: "/Applications/Atom.app/"
+#       pos: 1
