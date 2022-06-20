@@ -11,3 +11,4 @@ Combination of BASH, Ansible, and Homebrew to set up a machine to my spec.
 
 - ansible
 - [dockutil 3.0.2](https://github.com/kcrawford/dockutil/releases/tag/3.0.2)
+- [homebrew](https://brew.sh)
