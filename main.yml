@@ -35,6 +35,7 @@
       - bat
       - cli53
       - cowsay
+      - iftop
       - tree
   tasks:
     - name: loop through apps installed via homebrew
